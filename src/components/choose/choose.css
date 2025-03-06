@@ -1,0 +1,36 @@
+.choose_grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.choose_description {
+    margin-bottom: 3rem;
+}
+
+.choose_details {
+    row-gap: 2rem;
+}
+
+.choose__details-item {
+    display: flex;
+    align-items: start;
+    column-gap: 1.25rem;
+}
+
+.choose__details-img-wrapper {
+    border: 2px dashed var(--title-color);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    padding: 4px;
+}
+
+.choose__detail-img {
+    width: 36px;
+}
+
+.choose__detail-title {
+    font-size: var(--largest-font-size);
+}
