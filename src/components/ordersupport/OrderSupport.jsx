@@ -1,10 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import './orderSupport.css';
-// import FoodIcon from '../../assets/food-icon.svg';
-// import PenIcon from '../../assets/pen-icon.svg';
-// import UserIcon from '../../assets/user-icon.svg';
-// import WalletIcon from '../../assets/wallet-icon.svg';
-// import MenuIcon from '../../assets/menu-icon.svg';
+import Grid from "@mui/material/Grid";
+
+import { AddIcCall, AccountBalanceWallet, ShoppingBasket } from "@mui/icons-material";
+
+// import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+
 
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -36,21 +37,26 @@ const OrderSupport = () => {
             {/* Main Content */}
             <div className="main-content">
                 <h2>What support do you need</h2>
-                <div className="support-options">
-                    <div className="support-option">
-                        <img src="" alt="User Icon" className="icon" />
-                        <p>Call Staff</p>
-                    </div>
-                    <div className="support-option">
-                        <img src="" alt="Wallet Icon" className="icon" />
-                        <p>Call for Payment</p>
-                    </div>
-                </div>
-
-                <div className="menu-ordering">
-                    <img src="" alt="Menu Icon" className="icon" />
-                    <p>Menu and Ordering</p>
-                </div>
+                <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <div className="support-option">
+                            <AddIcCall style={{ fontSize: 50, color: "red" }} />
+                            <p>Gọi nhân viên</p>
+                        </div>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <div className="support-option">
+                            <AccountBalanceWallet style={{ fontSize: 50, color: "red" }} />
+                            <p>Gọi thanh toán</p>
+                        </div>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <div className="support-option">
+                            <ShoppingBasket style={{ fontSize: 50, color: "red" }} />
+                            <p>Thực đơn & Gọi món</p>
+                        </div>
+                    </Grid>
+                </Grid>
             </div>
         </div>
     );
